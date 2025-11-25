@@ -22,3 +22,6 @@ EOF
 sudo apt-get -y install apt-transport-https
 sudo apt-get update
 sudo apt-get -y install code # or code-insiders
+
+# Install keyring
+sudo apt-get -y install libsecret-1-0 gnome-keyring
