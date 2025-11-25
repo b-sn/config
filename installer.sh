@@ -18,7 +18,7 @@ if [[ $# -lt 1 || "$1" == "all" ]]; then
 
     if [[ $# -lt 1 ]]; then
         echo -e "\nUsage: $0 <script-name>"
-        echo "Possible names:"
+        echo "Possible script-names:"
     fi
     echo "$response" | jq -r '.[].name' | while read filename; do
         if [[ "$filename" == "$SCRIPT_NAME" ]]; then
