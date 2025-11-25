@@ -15,4 +15,4 @@ FILE="$1"
 URL="https://raw.githubusercontent.com/${REPO_USER}/${REPO_NAME}/${BRANCH}/${FILE}"
 
 echo "Downloading and executing: $URL"
-curl -sSL "$URL" | bash
+curl -sSL -H "Cache-Control: no-cache" "$URL" | bash
