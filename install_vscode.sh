@@ -19,6 +19,6 @@ Signed-By: /usr/share/keyrings/microsoft.gpg
 EOF
 
 # Update the package cache and install the package
-sudo apt -y install apt-transport-https
-sudo apt update
-sudo apt -y install code # or code-insiders
+sudo apt-get -y install apt-transport-https
+sudo apt-get update
+sudo apt-get -y install code # or code-insiders
