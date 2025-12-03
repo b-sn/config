@@ -42,7 +42,7 @@ if [[ $# -lt 1 || "$1" == "all" ]]; then
 fi
 
 FILE="$1"
-URL="https://raw.githubusercontent.com/${REPO_USER}/${REPO_NAME}/${BRANCH}/instal_${FILE}.sh"
+URL="https://raw.githubusercontent.com/${REPO_USER}/${REPO_NAME}/${BRANCH}/install_${FILE}.sh"
 
 echo "Downloading and executing: $URL"
 curl -sSL -H "Cache-Control: no-cache" "$URL" | bash
