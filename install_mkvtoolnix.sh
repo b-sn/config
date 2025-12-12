@@ -11,4 +11,4 @@ deb-src [signed-by=/etc/apt/keyrings/gpg-pub-moritzbunkus.gpg] https://mkvtoolni
 EOF
 
 sudo apt update
-sudo apt install mkvtoolnix mkvtoolnix-gui
+sudo apt -y install mkvtoolnix mkvtoolnix-gui
