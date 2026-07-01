@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if command -v docker >/dev/null 2>&1; then
+  echo "Docker already installed"
+  exit
+fi
+
 # Add Docker's official GPG key:
 sudo apt update
 sudo apt install ca-certificates curl
