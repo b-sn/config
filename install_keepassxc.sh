@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if ! command -v flatpak >/dev/null 2>&1; then
-	echo "Install flatpak first"
+  echo "Install flatpak first"
   exit
 fi
 
