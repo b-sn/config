@@ -7,11 +7,15 @@ if command -v firefox >/dev/null 2>&1; then
   exit
 fi
 
+if ! command -v wget gpg >/dev/null 2>&1; then
+  sudo apt-get update
+  sudo apt-get -y install wget gpg
+fi
+
 # Create a directory to store APT repository keys if it doesn't exist
 sudo install -d -m 0755 /etc/apt/keyrings
 
 # Import the Mozilla APT repository signing key
-sudo apt-get -y install wget
 wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
 
 # The fingerprint should be 35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3
