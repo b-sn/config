@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 
+if command -v alacritty >/dev/null 2>&1; then
+  echo "Alacritty already installed"
+  exit
+fi
+
 if ! command -v rustup >/dev/null 2>&1; then
-	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-	. "$HOME/.cargo/env"
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  . "$HOME/.cargo/env"
 fi
 
 rustup override set stable
