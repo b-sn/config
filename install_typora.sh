@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if command -v typora >/dev/null 2>&1; then
+  echo "Typora already installed"
+  exit
+fi
+
 # add Typora's key
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://downloads.typora.io/typora.gpg | sudo tee /etc/apt/keyrings/typora.gpg > /dev/null
