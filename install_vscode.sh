@@ -2,6 +2,11 @@
 
 # Source: https://code.visualstudio.com/docs/setup/linux
 
+if command -v code >/dev/null 2>&1; then
+  echo "VS Code already installed"
+  exit
+fi
+
 # Install the signing key
 sudo apt-get -y install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
