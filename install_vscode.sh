@@ -7,8 +7,12 @@ if command -v code >/dev/null 2>&1; then
   exit
 fi
 
+if ! command -v wget gpg >/dev/null 2>&1; then
+  sudo apt-get update
+  sudo apt-get -y install wget gpg
+fi
+
 # Install the signing key
-sudo apt-get -y install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo install -D -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/microsoft.gpg
 rm -f microsoft.gpg
