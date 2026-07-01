@@ -4,6 +4,11 @@
 # https://apt.syncthing.net/
 # https://docs.syncthing.net/users/autostart.html#linux
 
+if command -v syncthing >/dev/null 2>&1; then
+  echo "Syncthing already installed"
+  exit
+fi
+
 # Add the release PGP keys:
 sudo mkdir -p /etc/apt/keyrings
 sudo curl -L -o /etc/apt/keyrings/syncthing-archive-keyring.gpg https://syncthing.net/release-key.gpg
