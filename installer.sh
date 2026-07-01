@@ -8,7 +8,10 @@ BRANCH="main"
 SCRIPT_NAME=$(basename "$0")
 
 if [[ $# -lt 1 ]]; then
-    sudo apt-get -y install jq
+    if ! command -v jq >/dev/null 2>&1; then
+      sudo apt-get update
+      sudo apt-get -y install jq
+    fi
 
     response=$(curl -s "https://api.github.com/repos/$REPO_USER/$REPO_NAME/contents/?ref=$BRANCH")
     if [[ -z "$response" ]]; then
