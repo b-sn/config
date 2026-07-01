@@ -2,6 +2,11 @@
 
 # Source: https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions
 
+if command -v firefox >/dev/null 2>&1; then
+  echo "Firefox already installed"
+  exit
+fi
+
 # Create a directory to store APT repository keys if it doesn't exist
 sudo install -d -m 0755 /etc/apt/keyrings
 
