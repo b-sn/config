@@ -3,7 +3,7 @@
 # Source: https://www.smartmontools.org/wiki/Download
 
 sudo apt-get update
-sudo apt-get -y intsll git automake libtool
+sudo apt-get -y install git automake libtool
 
 git clone https://github.com/smartmontools/smartmontools
 
