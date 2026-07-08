@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Source: https://github.com/nmap/nmap
+
 if command -v nmap >/dev/null 2>&1; then
   echo "Nmap already installed; exit"
   exit
