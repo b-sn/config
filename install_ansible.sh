@@ -4,7 +4,7 @@
 # - https://docs.ansible.com/projects/ansible/latest/installation_guide/intro_installation.html
 # - https://pipx.pypa.io/stable/how-to/install-pipx/
 
-sudo apt install pipx
+sudo apt install -y pipx
 pipx ensurepath
 
 eval "$(register-python-argcomplete pipx)"
