@@ -6,7 +6,7 @@ sudo apt install -y curl ca-certificates
 sudo install -d /usr/share/postgresql-common/pgdg
 sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
 
-sudo cat > /etc/apt/sources.list.d/pgdg.sources << EOF
+cat <<EOF | sudo tee /etc/apt/sources.list.d/pgdg.sources
 Types: deb deb-src
 URIs: https://apt.postgresql.org/pub/repos/apt
 Suites: trixie-pgdg
