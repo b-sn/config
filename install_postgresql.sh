@@ -16,4 +16,4 @@ Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
 EOF
 
 sudo apt update
-sudo apt install postgresql-18
+sudo apt install -y postgresql-18
