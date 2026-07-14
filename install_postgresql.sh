@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Source: https://www.postgresql.org/download/linux/debian/
+
 sudo apt install -y curl ca-certificates
 sudo install -d /usr/share/postgresql-common/pgdg
 sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
