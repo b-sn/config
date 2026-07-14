@@ -31,7 +31,7 @@ if [[ $# -lt 1 ]]; then
 fi
 
 FILE="$1"
-URL="https://raw.githubusercontent.com/${REPO_USER}/${REPO_NAME}/${BRANCH}/install_${FILE}.sh"
+URL="https://raw.githubusercontent.com/${REPO_USER}/${REPO_NAME}/${BRANCH}/install_${FILE}.sh?$RANDOM"
 
 echo "Downloading and executing: $URL"
 curl -sSL -H "Cache-Control: no-cache, no-store, max-age=0" -H 'Pragma: no-cache' -H 'Expires: 0' "$URL"
