@@ -4,7 +4,7 @@ set -euo pipefail
 DL_JSON_URL="https://go.dev/dl/?mode=json"
 INSTALL_DIR="/usr/local"
 GO_DIR="${INSTALL_DIR}/go"
-PROFILE_FILE="${HOME}/.profile"
+PROFILE_FILE="${HOME}/.bashrc"
 PATH_LINE='export PATH=$PATH:/usr/local/go/bin'
 
 need_cmd() {
