@@ -118,7 +118,7 @@ main() {
   fi
 
   echo "Removing existing Go: ${GO_DIR}"
-  rm -rf "$GO_DIR"
+  sudo rm -rf "$GO_DIR"
 
   echo "Installing to: ${INSTALL_DIR}"
   sudo tar -C "$INSTALL_DIR" -xzf "$filename"
