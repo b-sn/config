@@ -125,6 +125,8 @@ main() {
 
   ensure_profile_path
 
+  rm "$filename"
+
   echo "Done. Restart your shell or run: source \"$PROFILE_FILE\""
   echo "Check: /usr/local/go/bin/go version"
 }
