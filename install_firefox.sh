@@ -7,10 +7,8 @@ if command -v firefox >/dev/null 2>&1; then
   exit
 fi
 
-if ! command -v wget gpg >/dev/null 2>&1; then
-  sudo apt-get update
-  sudo apt-get -y install wget gpg
-fi
+sudo apt-get update
+sudo apt-get -y install wget gpg
 
 # Create a directory to store APT repository keys if it doesn't exist
 sudo install -d -m 0755 /etc/apt/keyrings
