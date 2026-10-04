@@ -20,3 +20,6 @@ cd build
 cmake -DWITH_XC_NETWORKING=OFF -DWITH_XC_BROWSER=ON -DWITH_XC_SSHAGENT=ON -DCMAKE_BUILD_TYPE=Release -DWITH_ASAN=ON ..
 make -j"$(nproc)"
 sudo make install
+
+cd ../
+rm -fR ./keepassxc
