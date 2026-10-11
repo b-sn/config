@@ -2,11 +2,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [[ $EUID -ne 0 ]]; then
-    echo "Error: run this script as root" >&2
-    exit 1
-fi
-
 source /etc/os-release
 
 if [[ "${ID:-}" != "debian" ]]; then
