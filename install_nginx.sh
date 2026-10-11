@@ -23,8 +23,8 @@ case "${VERSION_CODENAME:-}" in
 esac
 
 # Install prerequisites
-apt-get update
-apt-get install -y \
+sudo apt-get update
+sudo apt-get install -y \
     curl \
     gnupg \
     ca-certificates \
@@ -46,7 +46,7 @@ if ! gpg --batch --show-keys --with-colons "$TMP_KEY" \
     exit 1
 fi
 
-install -m 644 "$TMP_KEY" "$KEYRING"
+sudo install -m 644 "$TMP_KEY" "$KEYRING"
 
 # Configure official nginx stable repository
 cat > /etc/apt/sources.list.d/nginx.list <<EOF
@@ -62,12 +62,12 @@ Pin-Priority: 900
 EOF
 
 # Install nginx
-apt-get update
-apt-get install -y nginx
+sudo apt-get update
+sudo apt-get install -y nginx
 
 # Enable and start nginx
-systemctl enable --now nginx
+sudo systemctl enable --now nginx
 
 # Verify installation
-nginx -v
-systemctl is-active nginx
+sudo nginx -v
+sudo systemctl is-active nginx
