@@ -49,12 +49,12 @@ fi
 sudo install -m 644 "$TMP_KEY" "$KEYRING"
 
 # Configure official nginx stable repository
-cat > /etc/apt/sources.list.d/nginx.list <<EOF
+cat <<EOF | sudo tee /etc/apt/sources.list.d/nginx.list
 deb [signed-by=$KEYRING] https://nginx.org/packages/debian ${VERSION_CODENAME} nginx
 EOF
 
 # Prefer packages from nginx.org
-cat > /etc/apt/preferences.d/99nginx <<'EOF'
+cat <<EOF | sudo tee /etc/apt/preferences.d/99nginx
 Package: *
 Pin: origin nginx.org
 Pin: release o=nginx
